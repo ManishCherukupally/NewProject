@@ -63,9 +63,16 @@ const LoginCard = (props) => {
                     // console.log(JSON.stringify(resp.data.status))
                     if (resp.data.status === "user_validated") {
                         window.localStorage.setItem("userStatus", resp.data.status)
-
-
-                        navigate("/home")
+                        
+                        if(resp.data.role === "admin"){
+                            // window.localStorage.setItem("userStatus", resp.data.status)
+                            navigate("/dashboard")
+                        }
+    
+                        else if(resp.data.role === "customer"){
+                            // window.localStorage.setItem("userStatus", resp.data.status)
+                            navigate("/home")
+                        }
                     }
                     else {
                         setLoader(false)

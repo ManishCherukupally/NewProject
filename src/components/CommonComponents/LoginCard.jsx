@@ -69,8 +69,11 @@ const LoginCard = (props) => {
                             navigate("/dashboard")
                         }
     
-                        else if(resp.data.role === "customer"){
-                            // window.localStorage.setItem("userStatus", resp.data.status)
+                        //  if(resp.data.role === "customer"){
+                        //     // window.localStorage.setItem("userStatus", resp.data.status)
+                        //     navigate("/home")
+                        // }
+                        if(resp.data.role === "customer"){
                             navigate("/home")
                         }
                     }

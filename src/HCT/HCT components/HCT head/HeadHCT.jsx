@@ -62,7 +62,7 @@ const HeadHCT = () => {
                     // removeToken(['sessionid']);
                     window.localStorage.clear()
                     // Optionally, redirect user to login page
-                    window.location.href = "/login";
+                    window.location.href = "/";
                 }
             })
             // window.location.href = "/login";
